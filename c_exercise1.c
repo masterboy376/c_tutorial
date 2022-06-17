@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// in this exersise we have to create a program to print multiplication table of a given number
+
 int main() {
 
   int inp;
