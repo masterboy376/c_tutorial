@@ -11,7 +11,7 @@ int rec_fib(int n){
 int itr_fib(int n){
   int a = 0;
   int b = 1;
-  for(int i = 0; i<n ; i++){
+  for(int i = 0; i<n-1 ; i++){
     b=a+b;
     a=b-a;
   }
@@ -22,7 +22,7 @@ int main() {
 
   int inp;
   printf("Enter the index to find the value of fibonacci series at: ");
-  scanf("%d\n", &inp);
+  scanf("%d", &inp);
   printf("the value of fibonacci series at index %d by itr: %d\n", inp,itr_fib(inp));
   printf("the value of fibonacci series at index %d by rec: %d\n", inp,rec_fib(inp));
   

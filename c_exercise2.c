@@ -49,7 +49,7 @@ int main()
         case '4':
         printf("Enter quantity in terms of first unit\n");
         scanf("%f", &first);
-        second = first * pound;
+        second = first * poundToKgs;
         printf("%f Pounds is equal to Kgs %f \n", first, second);
         break;
 
