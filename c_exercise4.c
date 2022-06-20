@@ -3,12 +3,17 @@
 
 void invertedPattern(int n)
 {
-    
+    for(int i=n; i>=1;i--){
+        for(int j=1; j<i; j++){
+            printf("*");
+        }
+        printf("*\n");
+    }
 }
 void erectPattern(int n)
 {
     for(int i=1; i<=n;i++){
-        for(int j=1; j<i-1; j++){
+        for(int j=1; j<i; j++){
             printf("*");
         }
         printf("*\n");
@@ -43,7 +48,7 @@ int main()
         case '1':
         printf("Enter the length of pattern: ");
         scanf("%d", &length);
-            printf("the erect pattern of length %d\n", length);
+            printf("the inverted pattern of length %d\n", length);
             invertedPattern(length);
             break;
 
