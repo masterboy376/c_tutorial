@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*conversion of units*/
+/*star pattern*/
 
 void invertedPattern(int n)
 {
