@@ -2,8 +2,7 @@
 
 // array reversal
 
-void arrayReversal(int a[]){
-    int len = sizeof(a)/sizeof(a[0]);
+void arrayReversal(int a[], int len){
     int i, temp;
     if(len%2==0){
         for(i = 0; i<len/2; i++){
@@ -13,7 +12,7 @@ void arrayReversal(int a[]){
         }
     }
     else{
-        for(i = 0; i<len+1/2; i++){
+        for(i = 0; i<(len+1)/2; i++){
             temp = a[i];
             a[i] = a[len-1-i];
             a[len-1-i]=temp;
@@ -22,15 +21,25 @@ void arrayReversal(int a[]){
     for (i = 0; i<len; i++){
         printf("%d ", a[i]);
     }
-
-    return a;
 }
 
 int main()
 {
 
-    int arr[6] = {1,2,3,4,5,6};
-    arrayReversal(arr);
+    int arr[] = {1,2,3,4,5};
+    int size = sizeof arr / sizeof arr[0];
+
+    printf("Before reversal\n");
+    for(int i = 0 ; i<size ; i++){
+         printf("%d ", arr[i]);
+    }
+    
+    printf("\n\n");
+
+    printf("After reversal\n");
+    arrayReversal(arr, size);
+
+    printf("\n");
 
     return 0;
 }
