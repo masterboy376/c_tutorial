@@ -1,13 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "extern_variable.c"
+
+int func()
+{
+    // int var;//local variable
+    extern int var;//global variable
+    var = 100;
+    return var;
+}
 
 int main()
 {
-    char *name;
-    name = (char *)malloc(3 * sizeof(char));
-    strcpy(name, "12");
-    free(name);
-    printf("%s\n", name);
+    //    declaration: tell the compiler about a variable but do not reserve the space for it
+    //   defination: declaration+ space reservation
+    printf("%d from function\n", func());
+    printf("%d from global\n", var);
     return 0;
 }
