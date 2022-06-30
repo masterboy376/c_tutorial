@@ -15,4 +15,6 @@ c_exercise1
 c_structures
 c_union
 c_pointersArithmatic_Array
+void_pointers
+null_pointer
 .vscode
